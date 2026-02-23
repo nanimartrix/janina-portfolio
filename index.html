@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janina Mergenthal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Canvas Layer -->
+    <canvas id="thoughts" aria-hidden="true"></canvas>
+
+    <main class="wrap">
+      <nav class="nav">
+        <a href="#arbeiten">arbeiten</a>
+        <a href="#gedanken">gedanken</a>
+        <a href="#kontakt">kontakt</a>
+      </nav>
+
+      <header class="hero" id="start">
+        <p class="role">
+          Frontend Developer in progress · UI · Emotion · Interactive Web
+        </p>
+
+        <h1>Janina Mergenthal</h1>
+
+        <p class="tagline">
+          <span class="tagline-base">Gedanken werden sichtbar..</span>
+          <span class="tagline-reveal">wenn man ihnen Raum gibt</span>
+        </p>
+      </header>
+
+      <!-- Arbeiten -->
+      <section id="arbeiten" class="block">
+        <h2>Arbeiten</h2>
+
+        <!-- Projekt 1 -->
+        <details class="card fade-in">
+          <!-- fade in Animation Hook -->
+          <summary class="card-title">
+            Gedanken werden sichtbar - persönliche Website
+          </summary>
+
+          <p class="muted">
+            Diese Seite ist mein erster bewusst gestalteter Webraum. Sie
+            entstand während des Lernens - Schritt für Schritt, ohne fertige
+            Vorlage. Der Fokus liegt auf Reduktion, Atmosphäre und Klarheit.
+            Gestaltung und Code greifen ineinander und bilden einen gemeinsamen
+            Prozess.
+          </p>
+
+          <div class="project-meta">
+            <p class="meta-text">
+              Technik: HTML, CSS, JavaScript, Canvas API, requestAnimationFrame,
+              Netlify
+            </p>
+
+            <p class="meta-status">
+              Status: Version 1 - bewusst minimal, darf wachsen
+            </p>
+          </div>
+        </details>
+
+        <!-- Projekt 2 -->
+        <details class="card fade-in">
+          <!-- fade in Animation Hook -->
+          <summary class="card-title">
+            Digitale Bestandsaufnahme - Hotel Check (Web-App MVP)
+          </summary>
+
+          <p class="muted">
+            Eine einfache Web-Anwendung zur strukturierten Bestandsaufnahme von
+            Hotelzimmern (Gebäude → Etage → Zimmer) mit auswertbarem
+            Datenexport.
+          </p>
+
+          <div class="project-meta">
+            <p class="meta-text">
+              Technik: HTML, CSS, JavaScript, localStorage, CSV Export, Google
+              Sheets, Netlify
+            </p>
+
+            <p class="meta-status">
+              Status: MVP (Version 1) - bewusst reduziert, ausbaufähig
+            </p>
+          </div>
+
+          <!-- ABSCHNITT 1 -->
+          <section class="project-section">
+            <h3>Problem & Ziel</h3>
+            <p>
+              Bestandsaufnahmen wurden bisher manuell in Excel durchgeführt. Das
+              war zeitaufwendig, fehleranfällig und im mobilen Einsatz
+              unpraktisch.
+            </p>
+            <p>
+              Ziel war es, ein einfaches, mobil nutzbares Tool zu entwickeln,
+              mit dem Mitarbeitende vor Ort schnell Zustände erfassen können.
+            </p>
+          </section>
+
+          <!-- ABSCHNITT 2 -->
+          <section class="project-section">
+            <h3>Lösung (MVP)</h3>
+            <ul>
+              <li>Strukturierte Auswahl: Gebäude → Etage → Zimmer</li>
+              <li>
+                Checklisten mit klaren Statusoptionen (OK, Defekt, Fehlt, N/A)
+              </li>
+              <li>Offline-Nutzung durch lokale Speicherung</li>
+              <li>CSV-Export zur Auswertung in Google Sheets</li>
+            </ul>
+          </section>
+
+          <!-- SCREENSHOTS -->
+          <section class="project-section project-media">
+            <h3>Einblick in die Anwendung</h3>
+
+            <figure class="screenshot">
+              <img
+                src="assets/Startbildschirm.png"
+                alt="Startansicht der Hotel-Check-Web-App"
+                loading="lazy"
+              />
+              <figcaption>Start: Auswahl von Etage und Zimmer</figcaption>
+            </figure>
+
+            <figure class="screenshot">
+              <img
+                src="assets/Check.png"
+                alt="Checkliste eines Hotelzimmers mit Status-Auswahl"
+                loading="lazy"
+              />
+              <figcaption>Checkliste mit Status & Kommentaren</figcaption>
+            </figure>
+
+            <figure class="screenshot">
+              <img
+                src="assets/Übersicht.png"
+                alt="Übersicht gespeicherter Checks mit CSV-Export"
+                loading="lazy"
+              />
+              <figcaption>Übersicht & CSV-Export</figcaption>
+            </figure>
+          </section>
+
+          <!-- ABSCHNITT 3 -->
+          <section class="project-section">
+            <h3>Umsetzung</h3>
+            <p>
+              Die Anwendung wurde bewusst ohne Frameworks umgesetzt, um Fokus
+              auf Struktur, Nutzerführung und Verständlichkeit zu legen.
+            </p>
+            <p>
+              JavaScript steuert den Anwendungszustand und die Datenspeicherung,
+              CSS sorgt für ein ruhiges, mobiles Layout.
+            </p>
+          </section>
+
+          <!-- ABSCHNITT 4 -->
+          <section class="project-section">
+            <h3>Ergebnis & Ausblick</h3>
+            <p>
+              Das MVP ist funktionsfähig und wird bereits als realistische
+              Grundlage für weitere Entwicklungen genutzt.
+            </p>
+            <p>
+              Denkbare Erweiterungen sind z. B. Rollen, Foto-Uploads oder
+              Cloud-Synchronisation.
+            </p>
+          </section>
+        </details>
+
+        <!-- Projekt 3 -->
+        <details class="card fade-in">
+          <!-- fade in Animation Hook -->
+          <summary class="card-title">Scroll Motion Study</summary>
+
+          <p class="muted">
+            Eine visuelle Studie zu Scroll-Interaktion und Timing. Bewegung
+            strukturiert Inhalte und Wahrnehmung und schafft bewusste Übergänge.
+          </p>
+
+          <div class="project-meta">
+            <p class="meta-text">
+              Technik: HTML, CSS, JavaScript, Intersection Observer,
+              requestAnimationFrame, Canvas API
+            </p>
+
+            <p class="live-link">
+              Live:
+              <a
+                href="https://scroll-motion-study.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Projekt ansehen →
+              </a>
+            </p>
+            <p class="meta-status">Status: Concept Study</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Gedanken -->
+      <section id="gedanken" class="block">
+        <h2>Gedanken</h2>
+        <p class="muted">Skizzen, Prozesse, Lernen</p>
+
+        <!-- Herzstudie als Card in der Gedanken-Section -->
+        <details class="card fade-in heart-card" id="heartCard">
+          <summary class="card-title">Herz-Studie - Canvas Motion</summary>
+
+          <!-- <div class="tought-card">
+          <h3>Pixel-Studie - Herz</h3> -->
+
+          <p class="muted">
+            Canvas-Experiment zu Formbildung, Raster und Interaktion. Eine
+            kleine Partikelstudie: Punkte sammeln sich zur Herzkontur und glühen
+            kuz auf - bewusst ruhig, wie ein Zeichen.
+          </p>
+
+          <!--<figure class="thought-media">
+            <img
+              src="assets/herz-studie.png"
+              alt="Pixelbasierte Herzform als Canvas-Sudie"
+              loading="lazy"
+            />
+          </figure> -->
+
+          <div class="project-meta">
+            <p class="meta-text">
+              Technik Canvas API, requestAnimationFrame, Particle System
+            </p>
+          </div>
+
+          <div class="heart-canvas-wrap" aria-hidden="true">
+            <canvas id="heartCanvas"></canvas>
+          </div>
+        </details>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="kontakt" class="block">
+        <h2>Kontakt</h2>
+        <p class="muted contact-links">
+          <a href="mailto:JANINA.MERGENTHAL@GMAIL.COM">Mail</a>
+
+          <a
+            href="https://github.com/nanimartrix"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+
+          <a
+            href="https://www.linkedin.com/in/janina-mergenthal-804924127/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="muted">&copy; 2026 Janina Mergenthal</p>
+    </footer>
+
+    <!-- Tagline + roll Fade -->
+    <script src="script.js"></script>
+
+    <!-- neues JS: Canvas "Thoughts"-->
+    <script src="thoughts.js"></script>
+  </body>
+</html>
