@@ -4,7 +4,7 @@ Ein bewusst reduzierter One-Pager als persönlicher Webraum: ruhig, klar, intera
 Fokus: Typografie, Struktur und feine Motion-Momente (Canvas / Micro-Interactions).
 
 ## 🌐 Live
-**Website:** https://janina-mergental.netlify.app
+**Website:** https://janina-mergenthal.netlify.app
 **Repository:** https://github.com/nanimatrix/janina-portfolio
 
 ---
