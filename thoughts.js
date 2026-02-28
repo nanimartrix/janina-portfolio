@@ -105,7 +105,7 @@ function animate(now) {
   // Wenn Reduced Motion: nur statisch / kaum Bewegung
   const active = isActive();
 
-  // Canvas immer clearen, damit er nicht "schmiert"
+  // Canvas immer clearen.. damit er nicht "schmiert"
   ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
   if (active && !prefersReducedMotion) {
@@ -137,10 +137,9 @@ function animate(now) {
       p.rGrow = 0;
       p.alpha = Math.min(p.alpha + 0.01, 0.18);
       p.draw();
-      // keine Entfernung nötig
     }
   } else {
-    // Nicht aktiv: Partikel leeren, damit beim nächsten Aktivieren frisch startet
+    // Nicht aktiv: Partikel leeren.. damit beim nächsten Aktivieren frisch startet
     particles.length = 0;
   }
 

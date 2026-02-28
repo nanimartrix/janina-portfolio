@@ -39,7 +39,7 @@
         <details class="card fade-in">
           <!-- fade in Animation Hook -->
           <summary class="card-title">
-            Gedanken werden sichtbar - persönliche Website
+            Gedanken werden sichtbar – persönliche Website
           </summary>
 
           <p class="muted">
@@ -66,7 +66,7 @@
         <details class="card fade-in">
           <!-- fade in Animation Hook -->
           <summary class="card-title">
-            Digitale Bestandsaufnahme - Hotel Check (Web-App MVP)
+            Digitale Bestandsaufnahme – Hotel Check (Web-App MVP)
           </summary>
 
           <p class="muted">
@@ -210,7 +210,7 @@
 
         <!-- Herzstudie als Card in der Gedanken-Section -->
         <details class="card fade-in heart-card" id="heartCard">
-          <summary class="card-title">Herz-Studie - Canvas Motion</summary>
+          <summary class="card-title">Heart Study – Canvas Motion</summary>
 
           <!-- <div class="tought-card">
           <h3>Pixel-Studie - Herz</h3> -->
@@ -231,13 +231,41 @@
 
           <div class="project-meta">
             <p class="meta-text">
-              Technik Canvas API, requestAnimationFrame, Particle System
+              Technik: Canvas API, requestAnimationFrame, Particle System
             </p>
           </div>
 
           <div class="heart-canvas-wrap" aria-hidden="true">
             <canvas id="heartCanvas"></canvas>
           </div>
+
+          <p class="canvas-hint muted">Hover / Click to start</p>
+        </details>
+
+        <!-- Growing Lines -->
+        <details class="card fade-in lines-card" id="linesCard">
+          <summary class="card-title">Growing Lines – Particle Network</summary>
+
+          <p class="muted">
+            Canvas-Study zu emergenten Strukturen. Partikel bewegen sich frei
+            und bilden ein wachsendes Netzwerk aus Linien. Interaktion verändert
+            das System.
+          </p>
+
+          <div class="project-meta">
+            <p class="meta-text">
+              Technik: Canvas API, requestAnimationFrame, Particle System,
+              Interaction
+            </p>
+          </div>
+
+          <div class="lines-canvas-wrap" aria-hidden="true">
+            <canvas id="linesCanvas"></canvas>
+          </div>
+
+          <p class="canvas-hint muted">
+            Hover / Click to start · Space: toggle lines · R: re-seed
+          </p>
         </details>
       </section>
 
@@ -273,5 +301,8 @@
 
     <!-- neues JS: Canvas "Thoughts"-->
     <script src="thoughts.js"></script>
+
+    <!-- Growing Lines -->
+    <script src="growing-lines.js"></script>
   </body>
 </html>
