@@ -34,13 +34,13 @@ Fokus: Typografie, Struktur und feine Motion-Momente (Canvas / Micro-Interaction
 
 ## 🎨 Canvas Studies
 
-Diese Experimente sind sind diekt im Portfolio integriertund starten nur bei Interaktion.
+Diese Experimente sind direkt im Portfolio integriert und starten nur bei Interaktion.
 
 -**Heart Study**
 Partikel formen eine Herzkurve und setzen sich zu einer leuchtenden Kontur zusammen.
 
 -**Growing Lines**
-Partikel-Netzwerk mit dynamischen Verbindungenund Pointer-Interaktion.
+Partikel-Netzwerk mit dynamischen Verbindungen und Pointer-Interaktion.
 
 -**Breathing Study**
 Ruhige Ripple-Struktur aus expandierenden Kreisen mit subtiler Drift und Glow.
