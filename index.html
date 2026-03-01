@@ -20,12 +20,13 @@
 
       <header class="hero" id="start">
         <p class="role">
-          Frontend Developer in progress · UI · Emotion · Interactive Web
+          Frontend Developer in progress · UI · Motion – Emotion · Interactive
+          Web
         </p>
 
         <h1>Janina Mergenthal</h1>
 
-        <p class="tagline">
+        <p class="tagline" aria-label="Hover für Reveal">
           <span class="tagline-base">Gedanken werden sichtbar..</span>
           <span class="tagline-reveal">wenn man ihnen Raum gibt</span>
         </p>
@@ -175,7 +176,7 @@
         <!-- Projekt 3 -->
         <details class="card fade-in">
           <!-- fade in Animation Hook -->
-          <summary class="card-title">Scroll Motion Study</summary>
+          <summary class="card-title">Scroll Motion Interface</summary>
 
           <p class="muted">
             Eine visuelle Studie zu Scroll-Interaktion und Timing. Bewegung
@@ -210,13 +211,13 @@
 
         <!-- Herzstudie als Card in der Gedanken-Section -->
         <details class="card fade-in heart-card" id="heartCard">
-          <summary class="card-title">Heart Study – Canvas Motion</summary>
+          <summary class="card-title">Heart Study</summary>
 
-        <p class="muted">
+          <p class="muted">
             Canvas-Experiment zu Formbildung, Raster und Interaktion. Eine
             kleine Partikelstudie: Punkte sammeln sich zur Herzkontur und glühen
             kuz auf - bewusst ruhig, wie ein Zeichen.
-        </p>
+          </p>
 
           <div class="project-meta">
             <p class="meta-text">
@@ -233,7 +234,7 @@
 
         <!-- Growing Lines -->
         <details class="card fade-in lines-card" id="linesCard">
-          <summary class="card-title">Growing Lines – Particle Network</summary>
+          <summary class="card-title">Growing Lines</summary>
 
           <p class="muted">
             Canvas-Study zu emergenten Strukturen. Partikel bewegen sich frei
@@ -255,6 +256,30 @@
           <p class="canvas-hint muted">
             Hover / Click to start · Space: toggle lines · R: re-seed
           </p>
+        </details>
+
+        <!-- breathing Study Card in der Gedanken-Section -->
+        <details class="card fade-in breathing-card" id="breathingCard">
+          <summary class="card-title">Breathing Study</summary>
+
+          <p class="muted">
+            Canvas-Study zu Atem-Impulsen und Stille. Aus einem Kernpunkt
+            entstehen sanfte Pulse: Ringe wachsen nach außen und lösen sich
+            weich auf. Leichte Drift und Glow halten die Bewegung bewusst ruhig.
+          </p>
+
+          <div class="project-meta">
+            <p class="meta-text">
+              Technik: Canvas API, requestAnimationFrame, Procedural Ripple
+              System
+            </p>
+          </div>
+
+          <div class="breathing-canvas-wrap" aria-hidden="true">
+            <canvas id="breathingCanvas"></canvas>
+          </div>
+
+          <p class="canvas-hint muted">Hover / Click to start</p>
         </details>
       </section>
 
@@ -291,7 +316,13 @@
     <!-- neues JS: Canvas "Thoughts"-->
     <script src="thoughts.js"></script>
 
+    <!-- Heart Study-->
+    <script src="heart.js"></script>
+
     <!-- Growing Lines -->
     <script src="growing-lines.js"></script>
+
+    <!-- Breathing Study -->
+    <script src="breathing.js"></script>
   </body>
 </html>
