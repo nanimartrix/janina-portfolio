@@ -90,7 +90,7 @@
   function draw() {
     ctx.clearRect(0, 0, w, h);
 
-    //Pulse - Glow zw. 3 und 9 Px
+    // Pulse - Glow zw. 3 und 9 Px
     glowPulse += 0.02;
     const glow = 6 + Math.sin(glowPulse) * 3;
 
@@ -99,10 +99,11 @@
 
       // subtiler glow für Linien
       ctx.shadowColor = "rgba(255,138,61,0.35)";
-      ctx.shadowBlur = glow; /*8;*/
+      ctx.shadowBlur = glow;
 
-      // Linie werden hier gezeichnet
-      ctx.shadowBlur = 0;
+      // Linien zeichnen
+      // (wenn Glow für Linien.. NICHT direkt auf 0 setzen)
+      // ctx.shadowBlur = 0;
 
       for (let i = 0; i < particles.length; i++) {
         const a = particles[i];
@@ -118,7 +119,7 @@
 
           if (d < cfg.maxLinkDist) {
             const alpha = (1 - d / cfg.maxLinkDist) * cfg.lineAlpha;
-            ctx.strokeStyle = `rgba(255,138,61,${alpha})`; /*`rgba(255,255,255,${alpha})`;*/
+            ctx.strokeStyle = `rgba(255,138,61,${alpha})`;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -127,10 +128,13 @@
           }
         }
       }
+
+      // danach Shadow wieder aus.. damit Dots crisp bleiben
+      ctx.shadowBlur = 0;
     }
 
     for (const p of particles) {
-      ctx.fillStyle = `rgba(255,138,61,${cfg.dotAlpha})`; /* `rgba(255,255,255,${cfg.dotAlpha})`;*/
+      ctx.fillStyle = `rgba(255,138,61,${cfg.dotAlpha})`;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
@@ -141,6 +145,7 @@
     running = false;
     if (raf) cancelAnimationFrame(raf);
     raf = null;
+    pointer.down = false; // wichtig: nichts "hängt"
     ctx.clearRect(0, 0, w, h);
   }
 
@@ -190,6 +195,7 @@
   }
 
   canvas.addEventListener("pointerdown", (e) => {
+    if (!armed) return;
     pointer.down = true;
     const pos = localPos(e);
     pointer.x = pos.x;
@@ -198,17 +204,21 @@
   });
 
   canvas.addEventListener("pointermove", (e) => {
+    if (!armed) return;
     const pos = localPos(e);
     pointer.x = pos.x;
     pointer.y = pos.y;
   });
 
   window.addEventListener("pointerup", () => {
+    if (!armed) return;
     pointer.down = false;
   });
 
-  // Keyboard
+  // Keyboard (nur wenn Card offen)
   window.addEventListener("keydown", (e) => {
+    if (!armed) return;
+
     const tag =
       (document.activeElement && document.activeElement.tagName) || "";
     if (tag === "INPUT" || tag === "TEXTAREA") return;
@@ -218,7 +228,6 @@
       showLines = !showLines;
     }
     if (e.code === "KeyR") {
-      if (!armed) return;
       reseed();
     }
   });
