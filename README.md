@@ -63,7 +63,9 @@ Ruhige Ripple-Struktur aus expandierenden Kreisen mit subtiler Drift und Glow.
 
 ## 📌 Status
 
-Version 1 — bewusst minimal, darf wachsen.
+Aktives Projekt — kontinuierliche Weiterentwicklung
+
+Das Portfolio begann als bewusst reduzierter One-Pager und wächst schrittweise durch UI-Experimente, Canvas-Studien und Interaktionsdesign-Explorationen.
 
 ---
 
