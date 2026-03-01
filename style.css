@@ -20,7 +20,7 @@ Design System
   /* Accent */
   --accent: #ff8a3d;
 
-  /* Extra Ink - blaugrauer Kontrastton für  Headlines / Key-Text */
+  /* Extra Ink - blaugrauer Kontrastton für Headlines / Key-Text */
   --headline-ink: #282342;
 
   /* Typography */
@@ -79,7 +79,7 @@ Canvas Layer
   z-index: 0;
   pointer-events: none;
 
-  /* Canvas ist nur sichtbar, wenn active (Hover / Tap) */
+  /* Canvas ist nur sichtbar.. wenn active (Hover / Tap) */
   opacity: 0;
   transition: opacity 300ms ease;
 }
@@ -147,6 +147,7 @@ Hero
 
   font-weight: 650;
   letter-spacing: -0.045em;
+  line-height: 1.05;
   color: var(--text-strong);
   -webkit-font-smoothing: antialiased;
 }
@@ -158,24 +159,77 @@ Hero
   }
 }
 
-/* Tagline + Reveal */
+/* =========================
+Tagline + Reveal (Text Shimmer)
+========================= */
+
 .tagline {
   margin: 10px 0 0;
-  font-size: 1.5rem;
-  font-weight: 650;
-  cursor: pointer;
   position: relative;
   z-index: 5;
   color: var(--headline-ink);
+  display: inline-block;
+  width: fit-content;
 }
+
+.tagline-base {
+  position: relative;
+  display: inline-block;
+
+  white-space: nowrap;
+
+  font-size: 1.5rem;
+  font-weight: 650;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Schimmer / Lichtreflex */
+.tagline-base::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 60%
+  );
+
+  transform: translateX(-35%);
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 200ms ease,
+    transform 650ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tagline-base:hover::before {
+    opacity: 0.6;
+    transform: translateX(20%);
+  }
+}
+
+.tagline-base:focus-visible {
+  outline: none;
+}
+
+/* Reveal */
 
 .tagline-reveal {
   display: block;
-  margin-top: 16px;
+  margin-top: 10px;
+
   font-size: 2.25rem;
   line-height: 1.15;
+
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(10px);
+
   transition:
     opacity var(--t-med) var(--ease),
     transform var(--t-med) var(--ease);
@@ -187,7 +241,14 @@ body.active .tagline-reveal {
   font-weight: 700;
 }
 
+body.active .wrap > *:not(.hero) {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
 /* Fokus-Zustand: nur Hero sichtbar */
+
 body.active .wrap > *:not(.hero) {
   opacity: 0;
   pointer-events: none;
@@ -322,7 +383,6 @@ Screenshots
 /* =========================
 Heart Study (Canvas in Card)
 ========================= */
-
 .heart-canvas-wrap {
   margin-top: 16px;
   width: 100%;
@@ -361,7 +421,6 @@ Heart Study (Canvas in Card)
 /* =========================
 Growing Lines (Canvas in Card) – eigenständig
 ========================= */
-
 .lines-canvas-wrap {
   margin-top: 16px;
   width: 100%;
@@ -403,7 +462,53 @@ Growing Lines (Canvas in Card) – eigenständig
   filter: brightness(1.02);
 }
 
-/* Hint unter dem Canvas */
+/* =========================
+Breathing Study (Canvas in Card)
+========================= */
+.breathing-canvas-wrap {
+  margin-top: 16px;
+  width: 100%;
+  height: clamp(220px, 34vh, 340px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+
+  /* standardmäßig „zu“ */
+  display: none;
+}
+
+/* Subtiles Glass / Glow Layer */
+.breathing-canvas-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+#breathingCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Nur wenn die Breathing-Card offen ist: Canvas anzeigen */
+.breathing-card[open] .breathing-canvas-wrap {
+  display: block;
+}
+
+/* Optional: leichtes Feedback beim Hover */
+.breathing-canvas-wrap:hover {
+  filter: brightness(1.02);
+}
+
+/* =========================
+Hint unter dem Canvas (für alle)
+========================= */
 .canvas-hint {
   margin: 10px 0 0;
   font-size: 0.85rem;
