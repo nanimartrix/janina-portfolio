@@ -92,6 +92,23 @@ body.active #thoughts {
   opacity: 1;
 }
 
+.thoughts-intro {
+  margin: 1.2rem 0 2.2rem;
+  max-width: 38rem;
+}
+
+.thoughts-intro p {
+  margin: 0 0 0.9rem;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  letter-spacing: 0.015em;
+}
+
+.thoughts-intro p:last-child {
+  margin-bottom: 0;
+}
+
 /* =========================
 Layout
 ========================= */
