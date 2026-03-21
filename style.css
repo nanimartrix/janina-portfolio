@@ -213,7 +213,7 @@ Tagline + Reveal (Text Shimmer)
 ========================= */
 
 .tagline {
-  margin: 10px 0 0;
+  margin: 14px 0 0;
   position: relative;
   z-index: 5;
   color: var(--headline-ink);
