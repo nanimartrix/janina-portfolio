@@ -290,12 +290,6 @@ body.active .tagline-reveal {
   font-weight: 700;
 }
 
-body.active .wrap > *:not(.hero) {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 300ms ease;
-}
-
 /* Fokus-Zustand: nur Hero sichtbar */
 
 body.active .wrap > *:not(.hero) {
@@ -599,6 +593,48 @@ Scroll Fade-in
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================
+Codepen-Link unter Studies
+========================= */
+
+.codepen-section {
+  margin-top: 3rem;
+  padding: 1.6rem 0;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.codepen-inner {
+  max-width: 32rem;
+}
+
+.codepen-text {
+  margin: 0;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+
+  color: var(--text-faint);
+}
+
+.codepen-text a {
+  color: inherit;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  transition:
+    color 300ms ease,
+    border-color 300ms ease;
+}
+
+.codepen-text a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* =========================
