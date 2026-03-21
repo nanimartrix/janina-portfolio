@@ -140,6 +140,10 @@ Hero
   padding-left: 12px;
 }
 
+.hero {
+  padding-bottom: 3rem;
+}
+
 .hero h1 {
   margin: 0;
 
@@ -158,6 +162,30 @@ Hero
   .hero h1 {
     white-space: nowrap;
   }
+}
+
+.hero-intro {
+  margin: 42px 0 0;
+  max-width: 32rem;
+
+  font-size: 0.98rem;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+
+  color: var(--text);
+
+  opacity: 0.92;
+
+  border-left: 1px solid var(--border);
+  padding-left: 12px;
+
+  transition: color 400ms ease;
+}
+
+body.active .hero-intro {
+  color: var(--accent);
+  opacity: 0.7;
+  /*margin-top: 48px; optional: etwas mehr Abstand.. wenn die Reveal da ist*/
 }
 
 /* =========================
